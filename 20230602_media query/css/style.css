@@ -1,0 +1,22 @@
+/* 1. and와 괄호 붙이면 안됨.
+2. 괄호 없으면 안됨.
+3. '=' 아님. ':'임. */
+
+/* desktop */
+body {
+    background-color: darkseagreen;
+}
+
+/* tablet */
+@media screen and (max-width: 720px) {
+    body {
+        background-color: magenta;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 540px) {
+    body {
+        background-color: #73d3f3;
+    }
+}
