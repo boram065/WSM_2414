@@ -12,16 +12,21 @@ function sayHello() {
 const navToggleI = nav_toggle.getElementsByTagName("i")[0]; //nav_toggle 요소안에 찾기
 const navListUl = document.getElementsByClassName("nav-list")[0];
 
-// 2. Event Handling
-// 햄버거 메뉴 클릭하면, 햄버거 메뉴 i "bi-bi-list" -> X "bi bi-x-lg"
-// 햄버거 메뉴 클릭하면, .nav-list에 .show-menu 보여주기 => 보여주기 <-> 안보여주기
-
+// 2. Event Handling 
 /* 시험에 나옴 */
 //함수 호출 ㄴㄴ, 함수 정의만 ㄱㄴ
 // nav_toggle.onclick = sayHello;
 // function과 변수 대신 '=>' 로 표현 ㄱㄴ
-nav_toggle.onclick = () => alert("안녕!"); // => 바로 실행되지 않음
+// nav_toggle.onclick = () => alert("안녕!"); // => 바로 실행되지 않음
 // nav_toggle.onclick = alert("안녕!"); => 바로 실행
+nav_toggle.onclick = () => {
+    // 햄버거 메뉴 클릭하면, 햄버거 메뉴 i "bi-bi-list" -> X "bi bi-x-lg"
+    // toggle() : 요소를 표시하고, 요소가 이미 표시되어 있다면 요소를 숨깁니다.
+    navToggleI.classList.toggle("bi-list");
+    navToggleI.classList.toggle("bi-x-lg");
+    // 햄버거 메뉴 클릭하면, .nav-list에 .show-menu 보여주기 => 보여주기 <-> 안보여주기
+    navListUl.classList.toggle("show-menu");
+}
 
 //-------------------------------------------------------------------------------
 //HTML -> js
