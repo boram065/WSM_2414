@@ -2,6 +2,7 @@ body {
     background-color: antiquewhite;
 }
 
+/* h1과 h2 둘 다 배경색을 plum으로 적용 */
 h1,
 h2 {
     /*bakcground-color: plum;*/
@@ -44,10 +45,12 @@ ul {
 li:nth-child(5) {
     text-decoration: underline;
 }
+
 /*짝수 행:even or 2n, 홀수 행:odd*/
 li:nth-child(even){
     background-color: #eee;
 }
+
 /*5의 배수 행*/
 li:nth-child(5n){
     background-color: #aaa;

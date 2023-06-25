@@ -3,7 +3,9 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;  /* 컨텐츠에 border주면 px 안맞으니까 방지...? */
+    /* content-box는 콘텐트 영역을 기준으로 크기를 정하지만,
+       border-box는 테두리를 기준으로 크기를 정한다.        */
+    box-sizing: border-box;
 }
 
 ul {
