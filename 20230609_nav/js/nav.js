@@ -31,7 +31,7 @@ nav_toggle.onclick = () => {
 //-------------------------------------------------------------------------------
 //HTML -> js
 // //id
-// const navToggleDiv = document.getElementById("nav-toggle");
+// const navToggleDiv = document.getElementById("nav_toggle");
 // nav_toggle //js 변수규칙은 반드시 지켜야함
 
 // //class

@@ -17,17 +17,16 @@ selector {
 TAG     특정 태그 적용
 #id     유일한 id에 적용        
 .class  같은 class에 적용
-
-(개 중요함)
+<!--(개 중요함)-->
  selector1 > selector2    selector1의 자식 selector2에 적용
  selector1 selector2      selector1의 자손 selector2에 적용
  selector1, selector2     selector1과 selector2에 같이 적용
  selector1 + selector2    selector1의 첫 자매인 selector2를 선택
  selector1 ~ selector2    selector1의 자매 중 모든 selector2를 선택
 
- selector:first-child()
- selector:nth-child()
- selector:last-child()
+ selector:first-child()   특정 요소의 첫번째 자식 요소 선택
+ selector:nth-child()     특정 요소의 n번째 자식 요소 선택
+ selector:last-child()    특정 요소의 마지막 자식 요소 선택
 
  selector:hover           마우스 올렸을 때의 selector
 
