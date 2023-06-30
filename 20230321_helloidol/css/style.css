@@ -63,3 +63,7 @@ li:nth-child(5n){
 ul:nth-child(2) > li:nth-child(2) {
     text-decoration: overline;
 }
+
+body > div:nth-child(8) > ul:nth-child(3) > li:nth-child(2) {
+    font-size: 8px;
+}
