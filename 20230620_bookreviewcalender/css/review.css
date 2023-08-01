@@ -1,0 +1,29 @@
+main {
+    margin-top: calc(44px + 100px);
+}
+
+main div {
+    border: 2px solid black;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+}
+
+.row-container {
+    display: flex;
+}
+
+.row-container:nth-child(2) {
+    flex-direction: column;
+}
+
+.book {
+    width: 200px;
+    height: 400px;
+}
+
+.explain {
+    display: flex;
+}
