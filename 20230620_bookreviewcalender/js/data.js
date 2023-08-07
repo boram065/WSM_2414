@@ -70,16 +70,16 @@ let books = [
         "img": "./images/10. 원씽.jpg",
     },
 ]
-let reviews = [
-    {
-        "id": 1,
-        "bookId": 1,
-        "userId": 1,
-        "synopsis": "세이노 작가의 인생 가르침",
-        "phrase": "공부 좀 해라",
-        "thoughts": "좋은 말. 지키기는 어려운",
-    },
-]
 
+// let reviews = [
+//     {
+//         "id": 1,
+//         "bookId": 1,
+//         "userId": 1,
+//         "synopsis": "세이노 작가의 인생 가르침",
+//         "phrase": "공부 좀 해라",
+//         "thoughts": "좋은 말. 지키기는 어려운",
+//     },
+// ]
 // console.log(books[0].title);
 // console.log(books[0]["title"]);
