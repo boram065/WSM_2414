@@ -37,8 +37,13 @@ console.log(title, author, publisher, bookImg);
 const bookImgDiv = document.getElementsByClassName("book-image")[0];
 bookImgDiv.innerHTML = `<img src = "${bookImg}" />`; // div에 이미지 넣기
 
+// HTML 요소 -> js 변수
 const titleDiv = document.getElementsByClassName("title")[1];
 titleDiv.innerHTML = title;
+
+// titleDiv에 title 속성에 값으로 title를 넣자
+// titleDiv.setAttrubute(속성명, 속성값);
+titleDiv.setAttribute("title", title); // titleDiv.title = title; <= 이것도 가능
 
 const authorDiv = document.getElementsByClassName("author")[1];
 authorDiv.innerHTML = author;

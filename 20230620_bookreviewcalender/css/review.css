@@ -17,11 +17,13 @@ main {
     flex-wrap: wrap;
     margin: 0 40px;
     gap: 40px;
+    min-width: 200px;   /* ... */
 }
 
 .info-group {
     flex-direction: column;
     gap: 40px;
+    overflow: hidden;   /* ... */
 }
 
 .info {
@@ -30,6 +32,9 @@ main {
 
 .title, .author, .publisher, .read-date, .synopsis, .phrase {
     font-size: 1.25rem;
+    white-space: nowrap; /* ... */
+    overflow: hidden;    /* ... */
+    text-overflow: ellipsis; /* 글자가 200px 넘으면 나머지 글자들을 ...으로 표시할 수 있게 함 */
 }
 
 .label {
@@ -76,10 +81,6 @@ main {
 
 
 /* delete me */
-
-/* main div {
-    border: 2px solid black;
-} */
 
 .book-image {
     width: 200px;
