@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%
+}
+
+.container {
+    height: 100%; /* 부모 요소 높이의 100% */
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* col : 6개, row : 8개 */
+}
+
+.item {
+    border: 2px solid black;
+    padding: 1rem;
+
+    /* 글자 가운데 정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* 여러줄일 때 가운데 정렬 하자 */
+}
+
+/* 제일 처음 칸 투명색으로 */
+.weekday:first-child {
+    background-color: transparent;
+}
+
+/* 1행 색상입히기 */
+.weekday {
+    background-color: rgb(74, 149, 0);
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* 1열 색상 입히기 */
+/* 7 13 18 23 26 32 37*/
+.item:nth-child(7),
+.item:nth-child(13),
+.item:nth-child(18),
+.item:nth-child(23),
+.item:nth-child(26),
+.item:nth-child(32),
+.item:nth-child(37) {
+    background-color: rgb(170, 220, 153);
+    font-size: 1.2rem;
+}
+
+
+/* 특정 과목만 색상 입히기 */
+/*.item:nth-child(10),
+.item:nth-child(16),
+.item:nth-child(18),
+ .item:nth-child(20),
+.item:nth-child(21),
+.item:nth-child(22),
+.item:nth-child(24),
+.item:nth-child(26),
+.item:nth-child(27),
+.item:nth-child(28),
+.item:nth-child(36),
+.item:nth-child(42) {
+    background-color: rgb(230, 255, 219);
+} */
+
+
+/* 특정 과목만 색상 입히기 */
+.item:nth-child(10) {
+    background-color: rgb(230, 255, 219);
+    grid-column: 4 / 5;
+    grid-row: 2 / 4;
+}
+
+.item:nth-child(17) {
+    background-color: rgb(230, 255, 219);
+    grid-column: -2 / -1;
+
+    /* 시험문제 출제 */
+    /* grid-row: 3 / 5;  <= 5 / 3으로 순서 바꿔도 됨 */
+    /* grid-row: span 2 / 5; <= 5번까지 2칸 */
+    grid-row: 3 / span 2; /* <= 3번부터 2칸 */
+}
+
+.item:nth-child(19) {
+    background-color: rgb(230, 255, 219);
+    grid-column: 2 / 3;
+    grid-row: 4 / span 2;
+}
+
+.item:nth-child(20) {
+    background-color: rgb(230, 255, 219);
+    grid-column: 3 / 4;
+    grid-row: 4 / span 2;
+}
+
+.item:nth-child(21) {
+    background-color: rgb(230, 255, 219);
+    grid-column: 4 / 5;
+    grid-row: 4 / span 2;
+}
+
+.item:nth-child(31) {
+    background-color: rgb(230, 255, 219);
+    grid-column: -2 / -1;
+    grid-row: 6 / span 2;
+}
+
+.item:nth-child(35) {
+    grid-column: 4 / 5;
+    grid-row: 7 / span 2;
+}
+
+.item:nth-child(36) {
+    grid-column: -3 / -2;
+    grid-row: 7 / span 2;
+}
