@@ -1,0 +1,15 @@
+main {
+    margin-top: calc(44px + 100px);
+}
+
+.title.flex-container{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    column-gap: 40px;   /* 세로줄 여백 */
+}
+
+/* delete */
+main * {
+    border: 2px solid black;
+}
