@@ -1,5 +1,8 @@
 main {
+    margin: 0 auto;
     margin-top: calc(44px + 100px);
+    width: calc(100% - 100px * 2);
+    max-width: 600px;
 }
 
 .title.flex-container{
@@ -7,9 +10,64 @@ main {
     justify-content: center;
     font-size: 1.5rem;
     column-gap: 40px;   /* 세로줄 여백 */
+    margin-bottom: 40px; /* title과 weekday 사이 공간 */
 }
 
-/* delete */
-main * {
-    border: 2px solid black;
+.weekday.container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: dodgerblue;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.dates.container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 10px;
+    font-size: 1.25rem;
+}
+
+.date.item {
+    /* 시험 문제 나옴 */
+    aspect-ratio: 1/1; /* 너비:비율 = 1:1 비율로 맞추자(반응형임.) */
+    display: grid; /* 글자 수평 수직 가운데 */      
+    place-items: center; /* 글자 수형 수직 가운데 */
+}
+
+.review.flex-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    font-size: 1.25rem;
+    background-color: dodgerblue;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/*태블릿*/
+@media screen and (max-width: 720px) {
+    
+}
+
+/*휴대폰*/
+@media screen and (max-width: 540px) {
+    main {
+        margin-top: calc(44px + 40px);
+        width: calc(100% - 10px * 2);
+    }
+
+    .weekday.container {
+        font-size: 1.25rem;
+    }
+
+    .dates.container {
+        font-size: 1rem;
+    }
+
+    .review.flex-container {
+        font-size: 1rem;
+    }
 }
