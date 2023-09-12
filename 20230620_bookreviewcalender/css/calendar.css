@@ -37,6 +37,11 @@ main {
     place-items: center; /* 글자 수형 수직 가운데 */
 }
 
+.date.item:nth-child(1) {
+    background-color: aquamarine;
+    grid-column-start: 6;
+}
+
 .review.flex-container {
     display: flex;
     flex-direction: column;
