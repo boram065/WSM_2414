@@ -12,7 +12,15 @@ const setCalendar = (year, month) => {
     //= `${month}월`;
     titleMonthDiv.innerHTML = `${month}월`;
 
-    // 1~해당 월의 마직막 날짜까지 날짜 만들자
+    // 1~해당 월의 마지막 날짜까지 날짜 만들자
+    // datesContainerDiv의 자식들(dateItemDiv) clear
+    // if (datesContainerDiv.hasChildNodes()) {
+    //     while (datesContainerDiv.firstChild) {
+    //         datesContainerDiv.removeChild(datesContainerDiv.firstChild);
+    //     }
+    // }
+    datesContainerDiv.innerHTML="";
+    
     // 해당 월의 마지막 날짜
     var thisMonthLastDate = new Date(year, month+1-1, 0).getDate(); // 10월의 전날 : 9월 30일
     for(let date = 1; date <= thisMonthLastDate; date++) {
@@ -33,7 +41,7 @@ const setCalendar = (year, month) => {
     firstDateDiv.style.gridColumnStart = firstDateDay+1;
 
     // 토요일 : 파란색 글자로
-    let saturdayFirstDate = 2;
+    let saturdayFirstDate = 7 - firstDateDay;
     let saturdayDivs = datesContainerDiv.querySelectorAll(`.date.item:nth-child(7n+${saturdayFirstDate}`);
     for (let saturdayDiv of saturdayDivs) {
         // .date.item:nth-child(7n+2) {color:blue;}
@@ -41,7 +49,7 @@ const setCalendar = (year, month) => {
     }
 
     // 일요일 : 빨간색 글자로
-    let sundayFirstDate = 3;
+    let sundayFirstDate = (8 - firstDateDay) % 7;
     let sundayDivs = datesContainerDiv.querySelectorAll(`.date.item:nth-child(7n+${sundayFirstDate})`);
     for (let sundayDiv of sundayDivs) {
         // .date.item:nth-child(7n+3) {color:red;}
